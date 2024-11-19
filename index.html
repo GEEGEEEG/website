@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puppy Sunny - Vietnamese Traditional Food</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #ffdd99, #ffcc66);
+            overflow-x: hidden;
+        }
+
+        header {
+            background: url('https://th.bing.com/th/id/OIP.-Rg0Eu3cTs2H9NRW_WRj8QHaHa?rs=1&pid=ImgDetMain') no-repeat center center;
+            background-size: cover;
+            color: #fff;
+            padding: 80px 50px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            animation: slideIn 2s ease-out;
+        }
+
+        header p {
+            font-size: 1.5em;
+            margin: 10px 0;
+            animation: fadeIn 2s ease-out;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #ff9900;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #ff6600;
+            transform: scale(1.1);
+        }
+
+        /* Section styling */
+        section {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .section-title {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #ff6600;
+            font-weight: bold;
+        }
+
+        /* Food Category Sections */
+        .food-category {
+            background: #fff;
+            margin: 20px auto;
+            max-width: 1100px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            position: relative;
+        }
+
+        .food-category h3 {
+            font-size: 2.2em;
+            margin-bottom: 15px;
+            color: #ff9900;
+        }
+
+        .food-category p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .product-item {
+            background: #f7f7f7;
+            border-radius: 15px;
+            overflow: hidden;
+            width: 250px;
+            height: 350px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .product-item img {
+            width: 100%;
+            height: 50%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .product-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .product-info {
+            padding: 14px;
+            text-align: center;
+        }
+
+        .product-info h4 {
+            font-size: 1.4em;
+            margin: 10px 0;
+        }
+
+        .product-info p {
+            font-size: 1.1em;
+            color: #666;
+        }
+
+        .product-info span {
+            display: block;
+            margin-top: 15px;
+            font-size: 1.3em;
+            color: #ff6600;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff6600;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-to-top:hover {
+            background-color: #ff3300;
+        }
+
+        /* Footer styling */
+        footer {
+            background: #ff9900;
+            color: #fff;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1em;
+        }
+
+        /* Animations */
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .product-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                font-size: 1em;
+                padding: 8px 15px;
+            }
+
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            .section-title {
+                font-size: 2em;
+            }
+
+            footer p {
+                font-size: 0.9em;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#fast-food">Fast Food</a>
+        <a href="#breakfast">Breakfast</a>
+        <a href="#lunch">Lunch</a>
+        <a href="#dinner">Dinner</a>
+    </nav>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Puppy Sunny</h1>
+        <p>Delicious Vietnamese traditional food – Fast food, breakfast, lunch, and dinner!</p>
+    </header>
+
+    <!-- Welcome Section -->
+    <section>
+        <h2 class="section-title">Welcome to Puppy Sunny!</h2>
+        <p>Your one-stop destination for authentic Vietnamese cuisine. From a quick snack to a hearty meal, we've got it all!</p>
+    </section>
+
+    <!-- Fast Food Section -->
+    <section id="fast-food" class="food-category">
+        <h3>Fast Food</h3>
+        <p>Quick, delicious, and perfect for on-the-go cravings!</p>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="https://www.willflyforfood.net/wp-content/uploads/2017/05/national-dish-quest-banh-mi.jpg.webp" alt="Bánh Mì">
+                <div class="product-info">
+                    <h4>Bánh Mì</h4>
+                    <p>Traditional Vietnamese sandwich with crispy baguette, pickled vegetables, and meat.</p>
+                    <span>50,000 VND</span>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="https://th.bing.com/th/id/OIP.Yz2pN_AxwGUj9YFF3v_KoAHaHa?w=187&h=187&c=7&r=0&o=5&pid=1.7" alt="Gỏi Cuốn">
+                <div class="product-info">
+                    <h4>Gỏi Cuốn</h4>
+                    <p>Fresh spring rolls with shrimp, pork, herbs, and vermicelli wrapped in rice paper.</p>
+                    <span>40,000 VND</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breakfast Section -->
+    <section id="breakfast" class="food-category">
+        <h3>Breakfast</h3>
+        <p>Start your day with our hearty breakfast options!</p>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="https://th.bing.com/th/id/OIP.kAmdwxYZb19-jruDRT9vQwHaGK?w=187&h=180&c=7&r=0&o=5&pid=1.7" alt="Phở">
+                <div class="product-info">
+                    <h4>Phở</h4>
+                    <p>Vietnamese noodle soup made with beef or chicken, herbs, and rich broth.</p>
+                    <span>60,000 VND</span>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="https://th.bing.com/th/id/OIP.cm-tcI918cZ4ufDBmkFufQHaEg?w=283&h=180&c=7&r=0&o=5&pid=1.7" alt="Bánh Bao">
+                <div class="product-info">
+                    <h4>Bánh Bao</h4>
+                    <p>Steamed bun filled with savory pork, mushrooms, and eggs.</p>
+                    <span>25,000 VND</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lunch Section -->
+    <section id="lunch" class="food-category">
+        <h3>Lunch</h3>
+        <p>Satisfy your midday hunger with our fulfilling lunches.</p>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="https://th.bing.com/th/id/OIP.5jVnpIEouSOd84GNufOMDwHaEK?w=261&h=180&c=7&r=0&o=5&pid=1.7" alt="Cơm Tấm">
+                <div class="product-info">
+                    <h4>Cơm Tấm</h4>
+                    <p>Grilled pork (or other meats) served with broken rice, pickled vegetables, and a fried egg.</p>
+                    <span>80,000 VND</span>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="https://th.bing.com/th/id/OIP.st0UZ8kkK7wybmqnVHaIGAHaEO?w=309&h=180&c=7&r=0&o=5&pid=1.7" alt="Bún Chả">
+                <div class="product-info">
+                    <h4>Bún Chả</h4>
+                    <p>Grilled pork patties with rice noodles and fresh herbs in a delicious dipping sauce.</p>
+                    <span>70,000 VND</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dinner Section -->
+    <section id="dinner" class="food-category">
+        <h3>Dinner</h3>
+        <p>Relax and indulge in our delicious dinner options.</p>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="https://th.bing.com/th/id/OIP.rKUQBDQKo1LjL0JF1HpnoQHaE7?w=276&h=184&c=7&r=0&o=5&pid=1.7" alt="Bánh Xèo">
+                <div class="product-info">
+                    <h4>Bánh Xèo</h4>
+                    <p>Crispy Vietnamese pancakes filled with shrimp, pork, bean sprouts, and herbs.</p>
+                    <span>90,000 VND</span>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="https://th.bing.com/th/id/OIP.5VKjfsoSwKxyUHXk1qqrtwHaE8?rs=1&pid=ImgDetMain" alt="Mì Quảng">
+                <div class="product-info">
+                    <h4>Mì Quảng</h4>
+                    <p>Quang-style noodles with turmeric, shrimp, pork, and fresh herbs.</p>
+                    <span>85,000 VND</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Puppy Sunny | Vietnamese food that makes you smile!</p>
+        <p>Address: 366- Nguyễn Huệ, TDP 2, TT La Hà, huyện Tư Nghĩa, tỉnh Quảng Ngãi</p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" onclick="window.scrollTo(0, 0)">Back to Top</button>
+</body>
+</html>
